@@ -13,8 +13,10 @@ Pendant le téléchargement il vous proposera plusieurs module a installer en pl
 
 ### Setup
 Avant de commencer à développer sur Unity, il faut faire quelques préparations:
-1. En premier il faut changer de plateforme d'exportation et passer sur Android, (car l'oculus quest est sous une base android, donc il faut lui envoyer des fichiers APK). Pour le faire aller dans l'onglet file/Build Settings, ensuite sélectionner android et cliquer sur switch platform.
+1. En premier il faut changer de plateforme d'exportation et passer sur Android, (car l'oculus quest est sous une base android, il faut donc lui envoyer des fichiers APK). Aller dans l'onglet file/Build Settings, ensuite sélectionner Android et cliquer sur switch platform.
 
-![build](Images/build.png)          ![build](Images/android.png)
+![android](Images/android.png)
 
-2. Ensuite nous devons paramétrer unity de tel sorte à ce qu'il supporte la réalité virtuel. Vous devez aller dans edit/project setting et après aller dans l'onglet player/android et dans XR setting cocher  
+2. Ensuite nous devons paramétrer Unity de tel sorte à ce qu'il supporte la réalité virtuel. Vous devez aller dans edit/Project Settings et après aller dans l'onglet Player/Android et dans XR setting cocher  
+
+![player](Images/player.png)
