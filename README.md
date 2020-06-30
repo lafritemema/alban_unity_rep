@@ -7,7 +7,7 @@ Il a la particularité de proposer une licence gratuite dite « Personal » avec
 
 Dans le cadre d'une utilisation d'un casque de réalité virtuel (Oculus Quest) pour la safety box, nous avons prototypé sur Unity.
 
-# Installation et Préparation de Unity
+# Installation et Préparation de Unity VR
 Pour commencer télécharger Unity Hub et Unity Editor [ici](https://unity3d.com/fr/get-unity/download),
 pendant le téléchargement il vous proposera plusieurs modules a installer en plus comme Visual studio, android, ios ... Sélectionner Visual studio et android et laisser le reste par défault.
 
