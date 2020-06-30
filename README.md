@@ -30,9 +30,9 @@ Maintenant tout est en place pour commencer à développer sur Unity.
 # Premier pas sur Unity
 Nous avons plusieurs onglets notre scene, le point de vu de notre camera, le dossier de notre projet, l'inspector et la hierarchie de notre projet.
 
-Commençons par créer notre environnement de test, tout d'abord on supprime "main camera" dans Hierarchy, ensuite dans la barre de recherche de project taper "OVRPlayerController" et faire un glisser déposer du modèle dans Hierarchy. Ensuite avec Inspector on met la position à 0 pour x,z et z.
+Commençons par créer notre environnement de test, tout d'abord on supprime "main camera" dans Hierarchy, car nous utiliserons une camera adapté pour la réalité virtuel. Ensuite dans la barre de recherche de project taper "OVRPlayerController" et faire un glisser déposer du modèle dans Hierarchy. Ensuite avec Inspector on met la position à 0 pour x,z et z pour centrer notre caméra.
 
-On continue avec un clic droit dans hierarchy puis on créer un "plane" et un "cube" avec 3D object et mettre leurs positions à 0. Pour finir on crée d'autres cubes plus petit et on agrandi le premier (Bonus : dans l'Asset du project on peut créer un "material", lui attribuer une couleur et avec un glisser déposer le mettre sur le grand cube) pour obtenir ceci :
+Pour continuer faites un clic droit dans hierarchy puis créer un "plane" et un "cube" avec 3D object, après mettre leurs positions à 0. Et enfin on crée d'autres cubes plus petit et on agrandi le premier (Bonus : dans l'Asset du project, créer un "material" Red et Black, Et attribuer ces couleurs et avec un glisser déposer sur le grand cube et sur le sol) pour obtenir ceci :
 
 ![scene](Images/scene.png)
 
