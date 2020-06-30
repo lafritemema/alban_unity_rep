@@ -44,14 +44,16 @@ Pour finir on sélectionne tout nos petit cubes et dans inspector on fait "Add C
 
 ![cube](Images/cube.png) ![grab](Images/grab.png)
 
-# Première exportation vers l'Oculus Quest
-Pour exporter il suffit d'aller dans file/Build Settings et ensuite on clic sur build. 
+Pour l'exporter, il suffit d'aller dans file/Build Settings et ensuite on clic sur build. 
 
 ![error](Images/error.png)
 
 Aie des erreurs sont apparues! Pour régler cela et exporter notre projet au format APK, il faut dans edit/Project Settings ensuite dans l'onglet Player sélectionner Android et dans Other Settings cliquer sur Vulkan puis - pour le supprimer. Maintenant on retourne sur l'onglet et le build marche correctement.
 
 ![vulcan](Images/vulcan.png)
+
+# Installer le test sur l'Oculus Quest
+Pour pouvoir installer notre test, il faut d'abord mettre notre Oculus en mode développeur pour lui faire accepter les sources inconnues. Ensuite L'installer par le biais d'une application.
 
 ### Configuration de l'Oculus Quest en mode développeur
 Tout d'abord il vous faut installer l'application Oculus sur votre téléphone activez le Wi-Fi et le Bluetooth et suivre les explications. Ensuite un fois le casque connecté vous devrez aller dans Autres Paramètres/Mode Développeur et en l'activant on est redirigé sur une page il faut se connecter et créer une organisation. Et maintenant il ne nous reste plus qu'à revenir sur l'application et activer le mode développeur.
