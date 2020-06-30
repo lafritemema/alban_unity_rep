@@ -36,11 +36,11 @@ Pour continuer faites un clic droit dans hierarchy puis créer un "plane" et un 
 
 ![scene](Images/scene.png)
 
-Ensuite on clic sur OVRPlayerController et dans l'inspector on fait "Add Component" et on tape "camera constraint" une fois ajouté on fait un glissé déposer de "OVRCameraRig" dans Camera Rig voir
+Ensuite on clic sur OVRPlayerController, dans l'inspector on fait "Add Component" et on écrit "camera constraint" une fois ajouté on fait un glissé déposer de "OVRCameraRig" dans Camera Rig (voir ci-dessous).
 
 ![hierarchy](Images/hierarchy.png) ![constraint](Images/constraint.png)
 
-Pour finir on sélectionne tout nos petit cubes et dans inspector on clic "Add Component" on ajoute OVR Grabbable et Rigidbody. Et voilà il ne nous reste plus qu'à l'exporter et c'est finis.
+Pour finir on sélectionne tout nos petit cubes et dans inspector on fait "Add Component" on ajoute OVR Grabbable et Rigidbody. Et voilà, il ne nous reste plus qu'à l'exporter et c'est finis.
 
 ![cube](Images/cube.png) ![grab](Images/grab.png)
 
