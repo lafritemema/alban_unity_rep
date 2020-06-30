@@ -49,7 +49,7 @@ Pour exporter il suffit d'aller dans file/Build Settings et ensuite on clic sur 
 
 ![error](Images/error.png)
 
-Aie des erreurs sont apparues! Pour régler ces erreurs et pouvoir exporter notre projet au format APK, il faut aller dans edit/Project Settings après dans l'onglet Player sélectionner Android et dans Other Settings cliquer sur Vulkan puis - pour le supprimer. Maintenant on retourne sur l'onglet et le build marche correctement.
+Aie des erreurs sont apparues! Pour régler cela et exporter notre projet au format APK, il faut dans edit/Project Settings ensuite dans l'onglet Player sélectionner Android et dans Other Settings cliquer sur Vulkan puis - pour le supprimer. Maintenant on retourne sur l'onglet et le build marche correctement.
 
 ![vulcan](Images/vulcan.png)
 
