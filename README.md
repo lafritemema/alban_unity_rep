@@ -92,3 +92,31 @@ Oculus Link permet de brancher votre Oculus Quest sur votre PC via un câble USB
 Oculus Link nécessite un câble USB de haute qualité. Il est recommandé d’utiliser un câble USB 3.0 de type C à C ou de type A à C de haute qualité et aux performances reconnues, mais aussi avoir une certaine configuration PC voir [ici](https://support.oculus.com/444256562873335/).
 
 Pour se connecter rien de plus simple, une fois votre casque reconnu par l’application PC, l’Oculus détecte automatiquement votre ordinateur et vous propose de passer sur la fonctionnalité Oculus Link Beta. En acceptant, vous vous retrouvez dans l’environnement VR propre à l’Oculus Rift avec un accès complet à son catalogue de jeux.
+
+# Projet Setup
+Ce petit projet a pour but de tester plusieurs choses, voir ce qu'il est possible de faire, prototyper.
+
+### Configuration de la caméra
+
+#### Préfabs
+En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRPlayerController" ce qui fait que nous n'avons besoin de configurer uniquement le tracking origin mode (pour régler la caméra en fonction de la distance du casque et du sol). Mais nous pouvons créer notre propre caméra.
+
+#### Manuel
+1. Créer un "Empty" dans Hierarchy, et renommer le VR Rig.
+2. Faites "Add Component" et taper XR Rig.
+3. Créer une caméra "Camera Offset" à la racine de VR Rig, et une autre caméra "VR camera" à la racine de l'autre caméra et avec "Add Component" ajouter Tracked Pose Driver.
+4. faites un glisser déposer des caméras dans le component XR Rig de l'Empty.
+
+![empty](Images/empty.png) ![xr](Images/xr.png)
+
+### Configuration des mains
+
+#### Préfabs
+
+#### Manuel
+1. Créer deux Empty à la racine de Camera Offset et renommer les Left Hand et Right Hand. 
+2. Selectionner les et ajouter XR Controller avec "Add Component", configurer controller node sur right hand ou left hand en fonction de la main.
+
+![controller](Images/controller.png)
+
+3. Vous pouvez soit importer des mains soit en créer vous même avec des formes
