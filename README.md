@@ -21,7 +21,7 @@ Avant de commencer à développer sur Unity, il faut faire quelques préparation
 
 ![player](Images/player.png)   ![oculus](Images/oculus.png)
 
-3. Pour finir il faut importer un package, Window/Asset Store et dans la barre de recherche taper "Oculus Integration" et importer le.
+3. Pour finir il faut importer un package, donc on va dans Window/Asset Store et dans la barre de recherche taper "Oculus Integration" et importer le.
 
 ![integration](Images/integration.png)
 
