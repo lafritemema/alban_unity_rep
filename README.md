@@ -56,12 +56,15 @@ Aie des erreurs sont apparues! Pour régler cela et exporter notre projet au for
 Pour pouvoir installer notre test, il faut d'abord mettre notre Oculus en mode développeur pour lui faire accepter les sources inconnues. Ensuite l'installer par le biais d'une application.
 
 ### Configuration de l'Oculus Quest en mode développeur
-Tout d'abord il vous faut installer l'application Oculus sur votre téléphone activez le Wi-Fi et le Bluetooth et suivre les explications. Ensuite une fois le casque connecté vous devrez aller dans Autres Paramètres/Mode Développeur et en l'activant on est redirigé sur une page il faut se connecter et créer une organisation. Et maintenant il ne nous reste plus qu'à revenir sur l'application et activer le mode développeur.
+1. Aller sur https://dashboard.oculus.com/ et connecter vous.
+2. Créer une nouvelle organisation.
+3. Ajouter un nom a votre organisation.
+4. Lancer l'application Oculus depuis votre téléphone. Dans les paramètres, selectionner votre casque, connecter vous via Bluetooth, Ensuite cliquer sur Autres Paramètres/ Développeur et activer le.
 
  ![nom](Images/nom.PNG)
 
 
-### Installation de SideQuest
+### SideQuest
 Pour installer SideQuest : https://sidequestvr.com/
 
 ### Connection à SideQuest
