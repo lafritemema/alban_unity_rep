@@ -9,7 +9,7 @@ Dans le cadre d'une utilisation d'un casque de réalité virtuel (Oculus Quest) 
 
 # Installation et Préparation de Unity VR
 Pour commencer télécharger Unity Hub et Unity Editor [ici](https://unity3d.com/fr/get-unity/download),
-pendant le téléchargement il vous proposera plusieurs modules a installer en plus comme Visual studio, android, ios ... Sélectionner Visual studio et android et laisser le reste par défault.
+pendant le téléchargement il vous proposera plusieurs modules à installer en plus comme Visual studio, android, ios ... Sélectionner Visual studio et android et laisser le reste par défault.
 
 ### Setup
 Avant de commencer à développer sur Unity, il faut faire quelques préparations:
