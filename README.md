@@ -13,7 +13,7 @@ pendant le téléchargement il vous proposera plusieurs modules à installer en 
 
 ### Setup
 Avant de commencer à développer sur Unity, il faut faire quelques préparations:
-1. En premier il faut changer de plateforme d'exportation et passer sur Android, (car l'oculus quest est sous une base android, il faut donc lui envoyer des fichiers APK). Aller dans l'onglet file/Build Settings, ensuite sélectionner Android et cliquer sur switch platform.
+1. En premier il faut changer de plateforme d'exportation et passer sur Android, (car l'Oculus Quest est sous une base android, il faut donc lui envoyer des fichiers APK). Aller dans l'onglet file/Build Settings, ensuite sélectionner Android et cliquer sur switch platform.
 
 ![android](Images/android.png)
 
