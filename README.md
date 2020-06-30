@@ -17,7 +17,7 @@ Avant de commencer à développer sur Unity, il faut faire quelques préparation
 
 ![android](Images/android.png)
 
-2. Ensuite nous devons paramétrer Unity de tel sorte à ce qu'il supporte la réalité virtuel. Vous devez aller dans edit/Project Settings, après aller dans l'onglet Player et sélectionner Android et dans XR Settings cocher Virtual Reality supported et avec le + ajouter Oculus.  
+2. Ensuite nous devons paramétrer Unity de tel sorte à ce qu'il supporte la réalité virtuel. Vous devez aller dans edit/Project Settings, ensuite dans l'onglet Player et sélectionner Android et pour finir XR Settings, cocher Virtual Reality supported et avec le + ajouter Oculus.  
 
 ![player](Images/player.png)   ![oculus](Images/oculus.png)
 
