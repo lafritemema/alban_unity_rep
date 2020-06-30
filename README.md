@@ -60,8 +60,23 @@ Tout d'abord il vous faut installer l'application Oculus sur votre téléphone a
 
 
 ### Installation de SideQuest
+Pour installer SideQuest : https://sidequestvr.com/
 
-### Exportation et installation de notre premier test
+### Connection à SideQuest
+Pour Installer notre fichier APK sur l'Oculus, il faut connecter le casque au PC avec un cable usb. Une fois branché lancer l'application SideQuest et si tout vas bien l'oculus est connecté au PC.
+
+![connected](Images/connected.png)
+
+Si vous n'etes pas connecté vous aurez besoin d'accepter des autorisations depuis le casque. ![unauthorized](Images/unauthorized.png)
+
+### Installation de notre premier test
+Pour installer notre test nous utiliserons uniquement ces deux icones (celle de gauche pour installer des APK et l'autre pour désinstaller des fichiers de notre casque). 
+
+![barre](Images/barre.png)
+
+On clique sur l'icone de gauche et on sélectionne le fichier APK que l'on a build précédement. Un message apparait en bas une fois le téléchargement terminé. Pour regarder les tâches en cours il suffit de cliquer sur l'icone de liste avec un v. Une fois cela fais il ne nous reste plus qu'à aller dans la bibliothèque de notre casque ensuite source inconnues et enfin de lancer notre test. 
+
+Mais faire cela à chaque fois que l'on souhaite tester notre projet cela deviens long, c'est pourquoi il existe une façon de tester sans perdre tout ce temps. La solution l'Oculus Link.
 
 # Oculus Link
 Oculus Link permet de brancher votre Oculus Quest sur votre PC via un câble USB afin que ce dernier soit reconnu comme un Oculus Rift Standard. Le but étant de pouvoir accéder à son ordinateur via le casque, mais aussi d’avoir accès à des jeux et applications plus gourmandes en exploitant la puissance de votre ordinateur. 
@@ -70,4 +85,3 @@ Oculus Link permet de brancher votre Oculus Quest sur votre PC via un câble USB
 Oculus Link nécessite un câble USB de haute qualité. Il est recommandé d’utiliser un câble USB 3.0 de type C à C ou de type A à C de haute qualité et aux performances reconnues, mais aussi avoir une certaine configuration PC voir [ici](https://support.oculus.com/444256562873335/).
 
 Pour se connecter rien de plus simple, une fois votre casque reconnu par l’application PC, l’Oculus détecte automatiquement votre ordinateur et vous propose de passer sur la fonctionnalité Oculus Link Beta. En acceptant, vous vous retrouvez dans l’environnement VR propre à l’Oculus Rift avec un accès complet à son catalogue de jeux.
-
