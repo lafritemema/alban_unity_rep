@@ -56,7 +56,7 @@ Aie des erreurs sont apparues! Pour régler ces erreurs et pouvoir exporter notr
 ### Configuration de l'Oculus Quest en mode développeur
 Tout d'abord il vous faut installer l'application Oculus sur votre téléphone activez le Wi-Fi et le Bluetooth et suivre les explications. Ensuite un fois le casque connecté vous devrez aller dans Autres Paramètres/Mode Développeur et en l'activant on est redirigé sur une page il faut se connecter et créer une organisation. Et maintenant il ne nous reste plus qu'à revenir sur l'application et activer le mode développeur.
 
-![autre](Images/autre.PNG) ![dev](Images/dev.PNG) ![nom](Images/nom.PNG) ![activate](Images/activate.PNG)
+ ![nom](Images/nom.PNG)
 
 
 ### Installation de SideQuest
