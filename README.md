@@ -53,10 +53,10 @@ Aie des erreurs sont apparues! Pour régler cela et exporter notre projet au for
 ![vulcan](Images/vulcan.png)
 
 # Installer le test sur l'Oculus Quest
-Pour pouvoir installer notre test, il faut d'abord mettre notre Oculus en mode développeur pour lui faire accepter les sources inconnues. Ensuite L'installer par le biais d'une application.
+Pour pouvoir installer notre test, il faut d'abord mettre notre Oculus en mode développeur pour lui faire accepter les sources inconnues. Ensuite l'installer par le biais d'une application.
 
 ### Configuration de l'Oculus Quest en mode développeur
-Tout d'abord il vous faut installer l'application Oculus sur votre téléphone activez le Wi-Fi et le Bluetooth et suivre les explications. Ensuite un fois le casque connecté vous devrez aller dans Autres Paramètres/Mode Développeur et en l'activant on est redirigé sur une page il faut se connecter et créer une organisation. Et maintenant il ne nous reste plus qu'à revenir sur l'application et activer le mode développeur.
+Tout d'abord il vous faut installer l'application Oculus sur votre téléphone activez le Wi-Fi et le Bluetooth et suivre les explications. Ensuite une fois le casque connecté vous devrez aller dans Autres Paramètres/Mode Développeur et en l'activant on est redirigé sur une page il faut se connecter et créer une organisation. Et maintenant il ne nous reste plus qu'à revenir sur l'application et activer le mode développeur.
 
  ![nom](Images/nom.PNG)
 
