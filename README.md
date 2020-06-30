@@ -99,7 +99,7 @@ Ce petit projet a pour but de tester plusieurs choses, voir ce qu'il est possibl
 ### Configuration de la caméra
 
 #### Préfabs
-En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRPlayerController" ce qui fait que nous n'avons besoin de configurer uniquement le tracking origin mode (pour régler la caméra en fonction de la distance du casque et du sol). Mais nous pouvons créer notre propre caméra.
+En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRPlayerController" ce qui fait que nous n'avons besoin de configurer uniquement le tracking origin mode (pour régler la caméra en fonction de la distance du casque et du sol).
 
 #### Manuel
 1. Créer un "Empty" dans Hierarchy, et renommer le VR Rig.
@@ -112,6 +112,9 @@ En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRP
 ### Configuration des mains
 
 #### Préfabs
+importer CustomHandLeft and Right pour ensuite appliquer dans le model prefab de left hand et right hand.
+
+![model](Images/model.png)
 
 #### Manuel
 1. Créer deux Empty à la racine de Camera Offset et renommer les Left Hand et Right Hand. 
@@ -119,4 +122,11 @@ En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRP
 
 ![controller](Images/controller.png)
 
-3. Vous pouvez soit importer des mains soit en créer vous même avec des formes
+3. Vous pouvez soit importer des mains soit en créer vous même avec des formes pour ensuite appliquer dans le model prefab de left hand et right hand.
+
+### Interaction, Grab
+
+"Add Component" sur left hand et right hand XR direct interactor
+
+
+Vidéo détail : [Valem](https://youtu.be/gGYtahQjmWQ)
