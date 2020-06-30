@@ -65,6 +65,8 @@ Pour pouvoir installer notre test, il faut d'abord mettre notre Oculus en mode d
 
 
 ### SideQuest
+SideQuest est un outil permettant aux développeurs d’applications VR de proposer leurs jeux sur Oculus Quest sans l’approbation de Facebook. Il permet aussi de mettre ses projets APK sur son Quest.
+
 Pour installer SideQuest : https://sidequestvr.com/
 
 ### Connection à SideQuest
