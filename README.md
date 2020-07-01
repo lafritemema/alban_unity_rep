@@ -105,7 +105,7 @@ En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRP
 1. Créer un "Empty" dans Hierarchy, et renommer le VR Rig.
 2. Faites "Add Component" et taper XR Rig.
 3. Créer une caméra "Camera Offset" à la racine de VR Rig, et une autre caméra "VR camera" à la racine de l'autre caméra et avec "Add Component" ajouter Tracked Pose Driver.
-4. faites un glisser déposer des caméras dans le component XR Rig de l'Empty.
+4. faites un glisser déposer des caméras dans le component XR Rig de l'Empty.f
 
 ![empty](Images/empty.png) ![xr](Images/xr.png)
 
@@ -153,6 +153,18 @@ Pour commencer on créer uns script que avec "Add movement" ensuite on y insert 
 ![move1](Images/move1.png) ![move2](Images/move2.png)
 
 ### Téléportation
+1. Pour commencer on ajoute Locomotion System et Teleportation Provider via "Add Component sur VR Rig.
+2. Ensuite on créer un Ray Interactor (XR/Ray Interactor) pour chaque main, et on change controller node en fonction de la main et on le place à la racine de camera offset (on peut modifier "Select Usage" pour utiliser la téléportation sur un bouton en particulier.
+3. On créer une zone de téléportation (XR/Teleportation Area), on peut aussi ajouter le script "Teleportation Area" sur un objet via "Add Component" pour créer une zone de téléportation.
+
+Le problème c'est que nous avons un rayon tout le temps dans la main et pas de cercle de téléportation. Nous allons maintenant changer la forme du rayon le rendre invisbible si innactif et ajouter un cercle de téléportation pour obetnir ceci :
+
+![teleport](Images/teleport.png)
+
+#### Changement de forme
+Dans "XR Ray Interactor" on change de "Line Type" pour "Projectile Curve" avec une valeur pour Velocity de 8.
+
+#### Ajout
 
 
 Source : [Valem](https://www.youtube.com/c/ValemVR/videos)
