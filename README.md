@@ -99,7 +99,7 @@ Ce petit projet a pour but de tester plusieurs choses, voir ce qu'il est possibl
 ### Configuration de la caméra
 
 #### Préfabs
-En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRPlayerController" ce qui fait que nous n'avons besoin de configurer uniquement le tracking origin mode (pour régler la caméra en fonction de la distance du casque et du sol).
+En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRPlayerController" C'est un préfabs ou nous avons besoin de configurer uniquement le tracking origin mode (pour régler la caméra en fonction de la distance du casque et du sol).
 
 #### Manuel
 1. Créer un "Empty" dans Hierarchy, et renommer le VR Rig.
@@ -112,7 +112,7 @@ En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRP
 ### Configuration des mains
 
 #### Préfabs
-importer CustomHandLeft and Right pour ensuite appliquer dans le model prefab de left hand et right hand.
+Avec Oculus Integration nous avons CustomHandLeft et CustomHandRight et on a juste a faire un glissé déposé dans le model prefab de Left Hand et Right Hand.
 
 ![model](Images/model.png)
 
@@ -122,26 +122,28 @@ importer CustomHandLeft and Right pour ensuite appliquer dans le model prefab de
 
 ![controller](Images/controller.png)
 
-3. Vous pouvez soit importer des mains soit en créer vous même avec des formes pour ensuite appliquer dans le model prefab de left hand et right hand.
+3. Vous pouvez soit importer des mains soit en créer vous même avec des formes pour ensuite faire un glissé déposé dans le model prefab de Left Hand et Right Hand.
 
 ### Grab
-"Add Component" sur left hand et right hand, taper XR direct interactor et Sphere collider. Ensuite mettre le Radius à 0.2, et cocher Is Trigger.
+Ajouter XR direct interactor et Sphere collider via "Add Component" sur left hand et right hand. Ensuite pour Sphere collider mettre le Radius à 0.2, et cocher Is Trigger.
 
 ![sphere](Images/sphere.png)
 
-Si vous voulez attrapper un objet il suffit de lui ajouter XR Grabbable avec "Add Component".
+Si vous voulez attrapper un objet il suffit de lui ajouter XR Grabbable via "Add Component".
 
 ### Interaction
-Nous allons intéragir avec une porte de commode. Pour ce faire installer la [ici](https://drive.google.com/file/d/18AU3DCQzmYgYekg_0-VYmnOQOcV7mftR/view). Une fois téléchargé et importé sur Unity sélectionner Door dans Cabinet et avec "Add Component" ajouter XR Grabbable, puis faire un glissé déposé du door handler dans collider et mettre le "movement type" sur Velocity tracking.
+Nous allons intéragir avec une porte de commode. Pour ce faire installer le prefab [ici](https://drive.google.com/file/d/18AU3DCQzmYgYekg_0-VYmnOQOcV7mftR/view). Une fois téléchargé et importé sur Unity sélectionner Door dans Cabinet et avec "Add Component" ajouter XR Grabbable, puis faire un glissé déposé du door handler dans collider et mettre le "movement type" sur Velocity tracking.
 
 ![door](Images/door.png) ![collider](Images/collider.png)
 
-Toujours dans door on ajoute Hinge Joint avec "Add Component" (le but étant de faire tourner la porte autour d'un point fixe). En cliquant sur Edit angular limits on peut apercevoir et modifier le point fixe sur lequel tournera a porte, cocher ensuite "use limits" pour limiter la rotation de la porte (voir photo ci desosus)
+Toujours dans Door on ajoute Hinge Joint via "Add Component" (le but étant de faire tourner la porte autour d'un point fixe). En cliquant sur Edit angular limits on peut apercevoir et modifier le point fixe sur lequel tournera a porte, cocher ensuite "use limits" pour limiter la rotation de la porte (voir photo ci desosus).
 
 ![joint](Images/joint.png) ![cabinet](Images/cabinet.png)
 
-Maintenant la porte marche parfaitement. Dans ce cas on avait un handler pour la porte, si jamais on veut faire une porte ou quelque chose qui coulisse mais sans avoir de poigné, on peut en faire un. 
+La porte marche parfaitement. Dans ce cas on avait un handler pour la porte, si jamais on veut faire une porte ou quelque chose qui coulisse mais sans avoir de poigné, on peut en faire un. 
 
-Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute fixed joint et XR grabbable et pour le connected body on fait un glissé déposer de la porte. Comme cela on a une forme que l'on peut attraper mais qui est fixé à notre porte et on peut intéragir avec elle maintenant.
+Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute fixed joint et XR grabbable et pour le connected body on fait un glissé déposer de la porte. Comme cela on a une forme que l'on peut attraper mais qui est fixé à notre porte et on peut intéragir avec elle maintenant. On peut le rendre invisible pour avoir l'impression d'attraper la poigné.
+
+![handler](Images/handler.png) ![mesh](Images/mesh.png)
 
 YouTube : [Valem](https://www.youtube.com/c/ValemVR/videos)
