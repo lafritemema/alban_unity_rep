@@ -150,7 +150,7 @@ Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et av
 Si on utilise l'OVRPlayerController le déplacement est déjà actif sur le préfab, sinon si on le fait à la main il faut coder en C#.  
 Pour commencer on créer uns script que avec "Add movement" ensuite on y insert ce texte :
 
- ![move2](Images/move2.png)![move1](Images/move1.png)
+![move1](Images/move1.png) ![move2](Images/move2.png)
 
 ### Téléportation
 
