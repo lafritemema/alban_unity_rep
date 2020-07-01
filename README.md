@@ -142,8 +142,17 @@ Toujours dans Door on ajoute Hinge Joint via "Add Component" (le but étant de f
 
 La porte marche parfaitement. Dans ce cas on avait un handler pour la porte, si jamais on veut faire une porte ou quelque chose qui coulisse mais sans avoir de poigné, on peut en faire un. 
 
-Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute fixed joint et XR grabbable et pour le connected body on fait un glissé déposer de la porte. Comme cela on a une forme que l'on peut attraper mais qui est fixé à notre porte et on peut intéragir avec elle maintenant. On peut le rendre invisible pour avoir l'impression d'attraper la poigné.
+Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute fixed joint et XR grabbable et pour le connected body on fait un glissé déposer de la porte. Comme cela on a une forme que l'on peut attraper mais qui est fixé à notre porte et on peut intéragir avec elle maintenant. On peut le rendre invisible pour avoir l'impression d'attraper la poigné en décochant Mesh Renderer.
 
 ![handler](Images/handler.png) ![mesh](Images/mesh.png)
 
-YouTube : [Valem](https://www.youtube.com/c/ValemVR/videos)
+### Déplacement
+Si on utilise l'OVRPlayerController le déplacement est déjà actif sur le préfab, sinon si on le fait à la main il faut coder en C#.  
+Pour commencer on créer uns script que avec "Add movement" ensuite on y insert ce texte :
+
+![move1](Images/move1.png) ![move2](Images/move2.png)
+
+### Téléportation
+
+
+Source : [Valem](https://www.youtube.com/c/ValemVR/videos)
