@@ -132,8 +132,16 @@ importer CustomHandLeft and Right pour ensuite appliquer dans le model prefab de
 Si vous voulez attrapper un objet il suffit de lui ajouter XR Grabbable avec "Add Component".
 
 ### Interaction
-Nous allons intéragir avec une porte de commode. Pour ce faire installer la [ici](https://drive.google.com/file/d/18AU3DCQzmYgYekg_0-VYmnOQOcV7mftR/view). Une fois téléchargé et importé sur Unity sélectionner Door dans Cabinet et avec "Add Component" ajouter XR Grabbable, puis faire un glissé déposé du door handler dans collider.
+Nous allons intéragir avec une porte de commode. Pour ce faire installer la [ici](https://drive.google.com/file/d/18AU3DCQzmYgYekg_0-VYmnOQOcV7mftR/view). Une fois téléchargé et importé sur Unity sélectionner Door dans Cabinet et avec "Add Component" ajouter XR Grabbable, puis faire un glissé déposé du door handler dans collider et mettre le "movement type" sur Velocity tracking.
 
 ![door](Images/door.png) ![collider](Images/collider.png)
+
+Toujours dans door on ajoute Hinge Joint avec "Add Component" (le but étant de faire tourner la porte autour d'un point fixe). En cliquant sur Edit angular limits on peut apercevoir et modifier le point fixe sur lequel tournera a porte, cocher ensuite "use limits" pour limiter la rotation de la porte (voir photo ci desosus)
+
+![joint](Images/joint.png) ![cabinet](Images/cabinet.png)
+
+Maintenant la porte marche parfaitement. Dans ce cas on avait un handler pour la porte, si jamais on veut faire une porte ou quelque chose qui coulisse mais sans avoir de poigné, on peut en faire un. 
+
+Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute fixed joint et XR grabbable et pour le connected body on fait un glissé déposer de la porte. Comme cela on a une forme que l'on peut attraper mais qui est fixé à notre porte et on peut intéragir avec elle maintenant.
 
 YouTube : [Valem](https://www.youtube.com/c/ValemVR/videos)
