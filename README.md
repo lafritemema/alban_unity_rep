@@ -124,9 +124,16 @@ importer CustomHandLeft and Right pour ensuite appliquer dans le model prefab de
 
 3. Vous pouvez soit importer des mains soit en créer vous même avec des formes pour ensuite appliquer dans le model prefab de left hand et right hand.
 
-### Interaction, Grab
+### Grab
+"Add Component" sur left hand et right hand, taper XR direct interactor et Sphere collider. Ensuite mettre le Radius à 0.2, et cocher Is Trigger.
 
-"Add Component" sur left hand et right hand XR direct interactor
+![sphere](Images/sphere.png)
 
+Si vous voulez attrapper un objet il suffit de lui ajouter XR Grabbable avec "Add Component".
 
-Vidéo détail : [Valem](https://youtu.be/gGYtahQjmWQ)
+### Interaction
+Nous allons intéragir avec une porte de commode. Pour ce faire installer la [ici](https://drive.google.com/file/d/18AU3DCQzmYgYekg_0-VYmnOQOcV7mftR/view). Une fois téléchargé et importé sur Unity sélectionner Door dans Cabinet et avec "Add Component" ajouter XR Grabbable, puis faire un glissé déposé du door handler dans collider.
+
+![door](Images/door.png) ![collider](Images/collider.png)
+
+YouTube : [Valem](https://www.youtube.com/c/ValemVR/videos)
