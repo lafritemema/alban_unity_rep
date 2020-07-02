@@ -34,6 +34,8 @@ Pour lier Visual Studio Code avec Unity, il va nous falloir plusieurs choses :
 9. Allez dans les dossiers /usr/bin, et sélectionnez l’exécutable "code"
 
 ### Setup
+Attention si vous avez un VPN d'activé il se peut que vous ayez des problèmes avec Unity. Si jamais c'est le cas désactiver le.
+
 Avant de commencer à développer sur Unity, il faut faire quelques préparations:
 1. En premier il faut changer de plateforme d'exportation et passer sur Android, (car l'Oculus Quest est sous une base android, il faut donc lui envoyer des fichiers APK). Aller dans l'onglet file/Build Settings, ensuite sélectionner Android et cliquer sur switch platform.
 
@@ -73,6 +75,8 @@ Pour l'exporter, il suffit d'aller dans file/Build Settings et ensuite on clic s
 Aie des erreurs sont apparues! Pour régler cela et exporter notre projet au format APK, il faut dans edit/Project Settings ensuite dans l'onglet Player sélectionner Android et dans Other Settings cliquer sur Vulkan puis - pour le supprimer. Maintenant on retourne sur l'onglet et le build marche correctement.
 
 ![vulcan](Images/vulcan.png)
+
+Support Vidéo : https://youtu.be/sKQOlqNe_WY
 
 # Installer le test sur l'Oculus Quest
 Pour pouvoir installer notre test, il faut d'abord mettre notre Oculus en mode développeur pour lui faire accepter les sources inconnues. Ensuite l'installer par le biais d'une application.
@@ -186,7 +190,19 @@ Le problème c'est que nous avons un rayon tout le temps dans la main et pas de 
 #### Changement de forme
 Dans "XR Ray Interactor" on change de "Line Type" pour "Projectile Curve" avec une valeur pour Velocity de 8.
 
-#### Ajout
+#### Ajout du cercle
+1. On créer un cylinder et on lui retire capsule collider.
+2. On règle sa taille.
+3. On ajoute un material avec un shader "Universal Render Pipeline/Unlit" avec un "Surface Type" Transparent.(J'ai mis une couleur bleu).
+4. On sélectionne nos deux Teleport Ray et on fait un glissé déposé du cylinder dans la partie "Reticle" de XR interactor Line visual.
 
+![reticle](Images/reticle.png)
+
+On peut customiser encore plus notre cercle mais en suivant le tuto j'ai rencontré quelques problèmes et je ne suis pas aller plus loin.
+
+#### Activation
+Dans VR Rig on créer un script (je l'ai appelé Controller) et on y insert ceci :
+
+![script](Images/script.png)
 
 Source : [Valem](https://www.youtube.com/c/ValemVR/videos)
