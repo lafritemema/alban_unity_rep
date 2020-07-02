@@ -212,6 +212,7 @@ Actuelement il est possible de modifier son environnement virtuel avec les trois
 Une fois que vos environnements personnalisés sont téléchargés et prêts à être installés, suivez ces étapes :
 
 1. Connectez votre Quest à votre ordinateur et ouvrez SideQuest, accédez à la section « Applications actuellement installées » en haut à droite de la barre de navigation
+
 2. Utilisez la fonction de recherche pour rechercher « environnement », Cela devrait donner : un paquet pour la maison classique (Rift Home), un pour le Winter Lodge et maintenant un pour la station spatial. Cliquez sur le rouage à côté de celui que vous voulez remplacer, et appuyez sur « Désinstaller l’application » dans la fenêtre qui s’ouvre.
 
 Certains environnements téléchargés vous permettent de choisir un téléchargement pour le Winter Lodge ou Classic Home, tandis que d’autres ne le font pas et vous obligent à remplacer l’un ou l’autre par l’environnement personnalisé. La plupart des liens de téléchargement l’indiqueront clairement, avec un titre tel que « Custom Simpsons Home – Living Room (Winter Lodge) ».
