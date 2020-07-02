@@ -8,8 +8,30 @@ Il a la particularité de proposer une licence gratuite dite « Personal » avec
 Dans le cadre d'une utilisation d'un casque de réalité virtuel (Oculus Quest) pour la safety box, nous avons prototypé sur Unity.
 
 # Installation et Préparation de Unity VR
+
+### Windows
 Pour commencer télécharger Unity Hub et Unity Editor [ici](https://unity3d.com/fr/get-unity/download),
 pendant le téléchargement il vous proposera plusieurs modules à installer en plus comme Visual studio, android, ios ... Sélectionner Visual studio et android et laisser le reste par défault.
+
+### Linux
+1. On va télécharger l'installeur depuis [ce lien](https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-4009651) et copier le dernier lien du tuto pour ensuite faire cette commande  
+"wget http://beta.unity3d.com/download/0af376155913/UnitySetup?_ga=2.215030034.429755760.1593674454-509257999.1586844666"
+2. On exécute l'installeur et on suis les instructions.
+3. On télécharge le fichier AppImage du Unity Hub [ici](https://unity3d.com/get-unity/download) et on l'exécute.
+4. On suis les instructions et on oublie pas de sélectionner en plus Android et Linux.
+
+#### Visual Studio Code
+Pour lier Visual Studio Code avec Unity, il va nous falloir plusieurs choses :
+
+1. Installer Visual Studio Code via [ce lien](http://doc.ubuntu-fr.org/visual_studio_code)
+2. Ouvrez Visual Studio Code (grâce a la commande "code")
+3. Sectionnez le menu "extensions"
+4. Cherchez le plugin "Unity3d-pack", et installer le
+5. Cherchez le plugin "vscode-solution-explorer", et installer le
+6. Ouvrez un projet Unity
+7. Allez dans les menus : Edit → Preferences → External Tools
+8. Cliquez sur "External Script Editor" → "browse"
+9. Allez dans les dossiers /usr/bin, et sélectionnez l’exécutable "code"
 
 ### Setup
 Avant de commencer à développer sur Unity, il faut faire quelques préparations:
