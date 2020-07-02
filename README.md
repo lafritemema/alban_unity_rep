@@ -112,7 +112,7 @@ On clique sur l'icone de gauche et on sélectionne le fichier APK que l'on a bui
 Mais faire cela à chaque fois que l'on souhaite tester notre projet cela deviens long, c'est pourquoi il existe une façon de tester sans perdre tout ce temps. La solution l'Oculus Link.
 
 # Oculus Link
-Oculus Link permet de brancher votre Oculus Quest sur votre PC via un câble USB afin que ce dernier soit reconnu comme un Oculus Rift Standard. Le but étant de pouvoir accéder à son ordinateur via le casque, mais aussi d’avoir accès à des jeux et applications plus gourmandes en exploitant la puissance de votre ordinateur. 
+Oculus Link permet de brancher votre Oculus Quest sur votre PC via un câble USB afin que ce dernier soit reconnu comme un Oculus Rift Standard. Le but étant de pouvoir accéder à son ordinateur via le casque, mais aussi d’avoir accès à des jeux et applications plus gourmandes en exploitant la puissance de votre ordinateur. Malheureusement l'application Oculus n'est pas encore disponible pour Linux (peut être en utilisant Wine il y aurait moyen d'avoir l'appli sur Linux, à tester). 
 
 ### Configuration
 Oculus Link nécessite un câble USB de haute qualité. Il est recommandé d’utiliser un câble USB 3.0 de type C à C ou de type A à C de haute qualité et aux performances reconnues, mais aussi avoir une certaine configuration PC voir [ici](https://support.oculus.com/444256562873335/).
