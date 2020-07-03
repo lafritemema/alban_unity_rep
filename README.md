@@ -15,13 +15,13 @@ pendant le téléchargement il vous proposera plusieurs modules à installer en 
 
 ### Linux
 1. On va télécharger l'installeur depuis [ce lien](https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/page-2#post-4009651) et copier le dernier lien du tuto pour ensuite faire cette commande  
-"wget http://beta.unity3d.com/download/0af376155913/UnitySetup?_ga=2.215030034.429755760.1593674454-509257999.1586844666"
+"wget le lien" On remplace le lien par le plus récent sur le forum.
 2. On exécute l'installeur et on suis les instructions.
 3. On télécharge le fichier AppImage du Unity Hub [ici](https://unity3d.com/get-unity/download) et on l'exécute.
 4. On suis les instructions et on oublie pas de sélectionner en plus Android et Linux.
 
 #### Visual Studio Code
-Pour lier Visual Studio Code avec Unity, il va nous falloir plusieurs choses :
+Sur Linux nous avons besoin de lier Visual Studio Code avec Unity, pour cela il va nous falloir plusieurs choses :
 
 1. Installer Visual Studio Code via [ce lien](http://doc.ubuntu-fr.org/visual_studio_code)
 2. Ouvrez Visual Studio Code (grâce a la commande "code")
@@ -52,7 +52,13 @@ Avant de commencer à développer sur Unity, il faut faire quelques préparation
 Maintenant tout est en place pour commencer à développer sur Unity.
 
 # Premier pas sur Unity
-Nous avons plusieurs onglets notre scene, le point de vu de notre camera, le dossier de notre projet, l'inspector et la hierarchie de notre projet.
+Nous avons plusieurs onglets Sur Unity :
+
+- Notre scene
+- Le point de vu de la caméra
+- Le dossier projet
+- L'inspector
+- La hierarchie de notre projet.
 
 Commençons par créer notre environnement de test, tout d'abord on supprime "main camera" dans Hierarchy, car nous utiliserons une camera adapté pour la réalité virtuel. Ensuite dans la barre de recherche de project taper "OVRPlayerController" et faire un glisser déposer du modèle dans Hierarchy. Ensuite avec Inspector on met la position à 0 pour x,z et z pour centrer notre caméra.
 
@@ -120,6 +126,8 @@ Oculus Link permet de brancher votre Oculus Quest sur votre PC via un câble USB
 Oculus Link nécessite un câble USB de haute qualité. Il est recommandé d’utiliser un câble USB 3.0 de type C à C ou de type A à C de haute qualité et aux performances reconnues, mais aussi avoir une certaine configuration PC voir [ici](https://support.oculus.com/444256562873335/).
 
 Pour se connecter rien de plus simple, une fois votre casque reconnu par l’application PC, l’Oculus détecte automatiquement votre ordinateur et vous propose de passer sur la fonctionnalité Oculus Link Beta. En acceptant, vous vous retrouvez dans l’environnement VR propre à l’Oculus Rift avec un accès complet à son catalogue de jeux.
+
+Important si vous voulez tester vos jeux sur Unity avec Oculus link en plus de [ça](https://github.com/lafritemema/alban_unity_rep#setup) pour la partie 2 faire pour Windows aussi).
 
 # Projet Setup
 Ce petit projet a pour but de tester plusieurs choses, voir ce qu'il est possible de faire, prototyper.
@@ -225,8 +233,7 @@ Une fois que vous avez désinstallé les environnements existants, comme indiqu�
 Une fois installé, vous pouvez changer d’environnement dans l’onglet Environnements virtuels de vos paramètres.
 
 # Hands Tracking Project
-
-Pour utiliser le hands tracking il faut (si ce n'est pas déjà fait) aller dans les paramètres du casque et activer le suivi des mains.
+Le suivi des mains (Hands Tracking), permet à l'utilisateur d'utiliser ses mains à la place des manettes. Pour utiliser le hands tracking il faut (si ce n'est pas déjà fait) aller dans les paramètres du casque et activer le suivi des mains.
 
 ### Configuration
 Pour configurer le hands tracking sur Unity c'est très simple, il faut simplement :
