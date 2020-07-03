@@ -60,17 +60,17 @@ Nous avons plusieurs onglets Sur Unity :
 - L'inspector
 - La hierarchie de notre projet.
 
-Commençons par créer notre environnement de test. Pour démarrer on supprime "main camera" dans Hierarchy (nous utiliserons une camera adapté pour la réalité virtuel). Ensuite dans la barre de recherche du dossier project taper "OVRPlayerController" et faire un glissé déposé du préfab dans Hierarchy. Après avec Inspector on met la position à 0 pour x,z et z pour centrer notre caméra (on recule un peu la caméra en arrière).
+Commençons par créer notre environnement de test. Pour démarrer on supprime "main camera" dans Hierarchy (nous utiliserons une camera adapté pour la réalité virtuel). Ensuite dans la barre de recherche du dossier project taper "OVRPlayerController" et faire un glissé déposé du préfab dans Hierarchy. Après avec Inspector on met la position à 0 pour x, y et z pour centrer notre caméra (on recule un peu la caméra en arrière).
 
 Pour continuer on effectue un clic droit dans hierarchy puis on crée un "plane" et un "cube" avec 3D object. A la suite de cela mettre leurs positions à 0 (avec l'inspector). Et enfin on crée d'autres cubes plus petit et on agrandi le premier (Bonus : dans l'Asset du project, créer un "material" Red et Black, Et attribuer ces couleurs et avec un glisser déposer sur le grand cube et sur le sol) pour obtenir ceci :
 
 ![scene](Images/scene.png)
 
-Ensuite on clic sur OVRPlayerController, dans l'inspector on fait "Add Component" et on écrit "camera constraint" une fois ajouté on fait un glissé déposer de "OVRCameraRig" dans Camera Rig (voir ci-dessous).
+On clic sur OVRPlayerController, dans l'inspector on fait "Add Component" et on écrit "camera constraint" une fois ajouté on fait un glissé déposer de "OVRCameraRig" dans Camera Rig (voir ci-dessous).
 
 ![hierarchy](Images/hierarchy.png) ![constraint](Images/constraint.png)
 
-Pour finir on sélectionne tout nos petit cubes et dans inspector on fait "Add Component" on ajoute OVR Grabbable et Rigidbody. Et voilà, il ne nous reste plus qu'à l'exporter et c'est finis.
+Et enfin on sélectionne tout nos petit cubes et dans inspector on fait "Add Component" on ajoute OVR Grabbable et Rigidbody. Et voilà, il ne nous reste plus qu'à l'exporter et c'est finis.
 
 ![cube](Images/cube.png) ![grab](Images/grab.png)
 
