@@ -198,7 +198,7 @@ Dans "XR Ray Interactor" on change de "Line Type" pour "Projectile Curve" avec u
 
 ![reticle](Images/reticle.png)
 
-On peut customiser encore plus notre cercle mais en suivant le tuto j'ai rencontré quelques problèmes et je ne suis pas aller plus loin.
+On peut customiser encore plus notre cercle mais en suivant le tuto j'ai rencontré quelques problèmes que je n'ai pus régler.
 
 #### Activation
 Dans VR Rig on créer un script (je l'ai appelé Controller) et on y insert ceci :
@@ -223,6 +223,19 @@ Une fois que vous avez désinstallé les environnements existants, comme indiqu�
 Une fois installé, vous pouvez changer d’environnement dans l’onglet Environnements virtuels de vos paramètres.
 
 # Hands Tracking Project
+
+### Configuration
+Pour configurer le hands tracking sur Unity c'est très simple, il faut simplement :
+1. Importer "OVRCameraRig", dans la partie "OVR Manager" selectionner hands only sur hands tracking supported.
+2. Target devices -> Quest.
+3. Tracking origin type -> Floor level.
+
+Attention il y a quelques changements de position avec les versions récentes de Unity (la forme change mais pas le fond).
+
+![manager](Images/manager.png)
+
+### Hands Draw
+Pour la suite vous devez importer le package VR Draw situé dans le dossier "Package" (faire un glissé déposé du package dans Asset).
 
 
 Source : [Valem](https://www.youtube.com/c/ValemVR/videos)
