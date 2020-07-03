@@ -60,9 +60,9 @@ Nous avons plusieurs onglets Sur Unity :
 - L'inspector
 - La hierarchie de notre projet.
 
-Commençons par créer notre environnement de test, tout d'abord on supprime "main camera" dans Hierarchy, car nous utiliserons une camera adapté pour la réalité virtuel. Ensuite dans la barre de recherche de project taper "OVRPlayerController" et faire un glisser déposer du modèle dans Hierarchy. Ensuite avec Inspector on met la position à 0 pour x,z et z pour centrer notre caméra.
+Commençons par créer notre environnement de test. Pour démarrer on supprime "main camera" dans Hierarchy (nous utiliserons une camera adapté pour la réalité virtuel). Ensuite dans la barre de recherche du dossier project taper "OVRPlayerController" et faire un glissé déposé du préfab dans Hierarchy. Après avec Inspector on met la position à 0 pour x,z et z pour centrer notre caméra (on recule un peu la caméra en arrière).
 
-Pour continuer faites un clic droit dans hierarchy puis créer un "plane" et un "cube" avec 3D object, après mettre leurs positions à 0. Et enfin on crée d'autres cubes plus petit et on agrandi le premier (Bonus : dans l'Asset du project, créer un "material" Red et Black, Et attribuer ces couleurs et avec un glisser déposer sur le grand cube et sur le sol) pour obtenir ceci :
+Pour continuer on effectue un clic droit dans hierarchy puis on crée un "plane" et un "cube" avec 3D object. A la suite de cela mettre leurs positions à 0 (avec l'inspector). Et enfin on crée d'autres cubes plus petit et on agrandi le premier (Bonus : dans l'Asset du project, créer un "material" Red et Black, Et attribuer ces couleurs et avec un glisser déposer sur le grand cube et sur le sol) pour obtenir ceci :
 
 ![scene](Images/scene.png)
 
