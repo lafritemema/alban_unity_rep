@@ -102,6 +102,8 @@ Pour Installer notre fichier APK sur l'Oculus, il faut connecter le casque au PC
 
 Si vous n'etes pas connecté vous aurez besoin d'accepter des autorisations depuis le casque. ![unauthorized](Images/unauthorized.png)
 
+Une fois connecté on peut se déplacer et installer les jeux que l'on souhaites très facilement comme dans un store.
+
 ### Installation de notre premier test
 Pour installer notre test nous utiliserons uniquement ces deux icones (celle de gauche pour installer des APK et l'autre pour désinstaller des fichiers de notre casque). 
 
@@ -224,6 +226,8 @@ Une fois installé, vous pouvez changer d’environnement dans l’onglet Enviro
 
 # Hands Tracking Project
 
+Pour utiliser le hands tracking il faut (si ce n'est pas déjà fait) aller dans les paramètres du casque et activer le suivi des mains.
+
 ### Configuration
 Pour configurer le hands tracking sur Unity c'est très simple, il faut simplement :
 1. Importer "OVRCameraRig", dans la partie "OVR Manager" selectionner hands only sur hands tracking supported.
@@ -235,7 +239,14 @@ Attention il y a quelques changements de position avec les versions récentes de
 ![manager](Images/manager.png)
 
 ### Hands Draw
-Pour la suite vous devez importer le package VR Draw situé dans le dossier "Package" (faire un glissé déposé du package dans Asset).
+Pour la suite vous devez importer le package "VR Draw" situé dans le dossier "Package" (faire un glissé déposé du package dans Asset).
 
+On cherche OVRHandPrefab et on fait un glissé déposé dans LeftHandAnchor et RightHandAnchor et on modifie leur nom et les paramètres en fonction de la main (OVR Hand, Skeleton et Mesh). Ensuite on crée deux Empty que l'on place dans dans tracking spaceet que l'on renome VRDrawRight et left. Après on sélectionne les deux et on ajoute le script "VR Hand Draw" et là aussi on change les paramètres en fonction de la main (attention dans le tuto vidéo il utilise VR Draw mais cela ne marche pas il faut utiliser le VR Hand Draw). On doit obtenir ceci :
+ 
+![draw](Images/draw.png) ![VRdraw](Images/VRdraw.png)
 
-Source : [Valem](https://www.youtube.com/c/ValemVR/videos)
+Maintenant On fait un glissé déposé de LeftHandPrefab et RightHandPrefab vers "Object to track movement" qui est dans VRDrawRight et VRDrawLeft. Ensuite on clic sur le plus de "default line material" de VRDrawLeft et Right et on selectionne lineleft ou right en fonction de la main. Et maintenant nous pouvons dessiner en vr avec le suivi des mains.
+
+Tuto Vidéo [ici](https://youtu.be/A02vzFooYj8)
+
+Source utilisé pour cette documentation : [Valem](https://www.youtube.com/c/ValemVR/videos),  [Dilmer](https://www.youtube.com/c/DilmerValecillos/videos)
