@@ -188,7 +188,7 @@ Dans ce cas on avait un handler pour la porte, si jamais on veut faire une porte
 #### Manuel
 Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute "Fixed Joint" et "XR Grabbable". Dans la partie "connected body" on fait un glissé déposer de la porte (ou de l'objet avec lequel on veut fixer notre forme). Comme cela on a une forme que l'on peut attraper et qui est fixé à notre porte. On peut maintenant intéragir avec elle. (Optionnel : on peut le rendre invisible pour avoir l'impression d'attraper la poigné en décochant Mesh Renderer).
 
-![handler](Images/handler.png) ![mesh](Images/mesh.png) ![handler2](Images/handler2.png)
+![handler](Images/handler.png) ![mesh](Images/mesh.png) ![handler](Images/handler.png)
 
 ### Déplacement
 
@@ -198,7 +198,72 @@ Avec l'OVRPlayerController le déplacement est déjà actif, donc nous n'avons r
 #### Manuel
 Il faut coder en C#. Pour commencer on créer un script avec "Add component" ensuite on y insert ce texte :
 
-![move1](Images/move1.png) ![move2](Images/move2.png) ![move3](Images/move3.png)
+     using System.Collections;
+     using System.Collections.Generic;
+     using UnityEngine;
+     using UnityEngine.XR;
+     using UnityEngine.XR.Interaction.Toolkit;
+     
+     
+     public class Movement : MonoBehaviour
+     {
+         public float speed = 1;
+         public XRNode inputSource;
+         public float gravity = -9.81f;
+         public LayerMask groundLayer;
+         public float additionalHeight = 0.2f;
+
+         private float fallingSpeed;
+         private XRRig rig;
+         private Vector2 inputAxis;
+         private CharacterController character;
+
+         // Start is called before the first frame update
+         void Start()
+         {
+             character = GetComponent<CharacterController>();
+             rig = GetComponent<XRRig>();
+         }
+
+         // Update is called once per frame
+         void Update()
+         {
+             InputDevice device = InputDevices.GetDeviceAtXRNode(inputSource);
+             device.TryGetFeatureValue(CommonUsages.primary2DAxis, out inputAxis);
+         }
+
+         private void FixedUpdate()
+         {
+             CapsuleFollow();
+
+             Quaternion headYaw = Quaternion.Euler(0, rig.cameraGameObject.transform.eulerAngles.y, 0);
+             Vector3 direction = headYaw * new Vector3(inputAxis.x, 0, inputAxis.y);
+
+             character.Move(direction * Time.fixedDeltaTime * speed);
+
+             bool isGrounded = CheckIfGrounded();
+             if (isGrounded)
+                 fallingSpeed = 0;
+             else
+                 fallingSpeed += gravity * Time.fixedDeltaTime;
+             character.Move(Vector3.up * fallingSpeed * Time.fixedDeltaTime);
+         }
+
+         void CapsuleFollow()
+         {
+             character.height = rig.cameraInRigSpaceHeight + additionalHeight;
+             Vector3 capsuleCenter = transform.InverseTransformPoint(rig.cameraGameObject.transform.position);
+             character.center = new Vector3(capsuleCenter.x, character.height/2 + character.skinWidth, capsuleCenter.z);
+         }
+
+         bool CheckIfGrounded()
+         {
+             Vector3 rayStart = transform.TransformPoint(character.center);
+             float rayLenght = character.center.y + 0.01f;
+             bool hasHit = Physics.SphereCast(rayStart, character.radius, Vector3.down, out RaycastHit hitInfo, rayLenght, groundLayer);
+             return hasHit;
+         }
+     }
 
 ### Téléportation
 1. Pour commencer on ajoute Locomotion System et Teleportation Provider via "Add Component sur VR Rig.
