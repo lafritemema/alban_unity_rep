@@ -188,7 +188,7 @@ Dans ce cas on avait un handler pour la porte, si jamais on veut faire une porte
 #### Manuel
 Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute "Fixed Joint" et "XR Grabbable". Dans la partie "connected body" on fait un glissé déposer de la porte (ou de l'objet avec lequel on veut fixer notre forme). Comme cela on a une forme que l'on peut attraper et qui est fixé à notre porte. On peut maintenant intéragir avec elle. (Optionnel : on peut le rendre invisible pour avoir l'impression d'attraper la poigné en décochant Mesh Renderer).
 
-![handler](Images/handler.png) ![mesh](Images/mesh.png) ![handler](Images/handler.png)
+![handler](Images/handler.png) ![mesh](Images/mesh.png) ![handler2](Images/handler2.png)
 
 ### Déplacement
 
@@ -266,21 +266,26 @@ Il faut coder en C#. Pour commencer on créer un script avec "Add component" ens
      }
 
 ### Téléportation
-1. Pour commencer on ajoute Locomotion System et Teleportation Provider via "Add Component sur VR Rig.
-2. Ensuite on créer un Ray Interactor (XR/Ray Interactor) pour chaque main, et on change controller node en fonction de la main et on le place à la racine de camera offset (on peut modifier "Select Usage" pour utiliser la téléportation sur un bouton en particulier.
-3. On créer une zone de téléportation (XR/Teleportation Area), on peut aussi ajouter le script "Teleportation Area" sur un objet via "Add Component" pour créer une zone de téléportation.
+1. Pour commencer on ajoute "Locomotion System" et "Teleportation Provider" via "Add Component" sur VR Rig.
+2. Ensuite on créer un Ray Interactor (clic droit dans hierarchy => XR/Ray Interactor) pour chaque main, on modifie "controller node" en fonction de la main, et on les places à la racine de "camera offset" (on peut modifier "Select Usage" pour utiliser la téléportation sur un bouton en particulier).
+3. On créer une zone de téléportation (clic droit dans hierarchy => XR/Teleportation Area), mais on peut aussi ajouter le script "Teleportation Area" sur un objet via "Add Component" pour créer une zone de téléportation.
 
-Le problème c'est que nous avons un rayon tout le temps dans la main et pas de cercle de téléportation. Nous allons maintenant changer la forme du rayon le rendre invisbible si innactif et ajouter un cercle de téléportation pour obetnir ceci :
+Le problème c'est que nous avons un rayon tout le temps dans la main et pas de cercle de téléportation. Nous allons donc faire quelques mofidications comme :
+1. Changer la forme du rayon
+2. Le rendre invisbible si innactif
+3. Ajouter un cercle de téléportation
+
+Pour obetnir ceci :
 
 ![teleport](Images/teleport.png)
 
 #### Changement de forme
-Dans "XR Ray Interactor" on change de "Line Type" pour "Projectile Curve" avec une valeur pour Velocity de 8.
+Dans "XR Ray Interactor" on change de "Line Type" pour "Projectile Curve" avec une valeur pour Velocity de 8 (à faire pour les deux mains).
 
 #### Ajout du cercle
-1. On créer un cylinder et on lui retire capsule collider.
+1. On créer un cylinder et on lui retire capsule collider dans inspector.
 2. On règle sa taille.
-3. On ajoute un material avec un shader "Universal Render Pipeline/Unlit" avec un "Surface Type" Transparent.(J'ai mis une couleur bleu).
+3. On ajoute un material avec un shader "Universal Render Pipeline/Unlit" avec un "Surface Type" Transparent (j'ai mis une couleur bleu).
 4. On sélectionne nos deux Teleport Ray et on fait un glissé déposé du cylinder dans la partie "Reticle" de XR interactor Line visual.
 
 ![reticle](Images/reticle.png)
@@ -290,7 +295,38 @@ On peut customiser encore plus notre cercle mais en suivant le tuto j'ai rencont
 #### Activation
 Dans VR Rig on créer un script (je l'ai appelé Controller) et on y insert ceci :
 
-![script](Images/script.png)
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.XR.Interaction.Toolkit;
+
+    public class Controller : MonoBehaviour
+    {
+        public XRController left;
+        public XRController right;
+        public InputHelpers.Button teleportActivation;
+        public float activation = 0.1f;
+
+        void Update()
+        {
+            if (left)
+            {
+                left.gameObject.SetActive(CheckIfActivated(left));
+            }
+
+            if (right)
+            {
+                right.gameObject.SetActive(CheckIfActivated(right));
+           }
+        }
+
+        public bool CheckIfActivated(XRController controller)
+        {
+            InputHelpers.IsPressed(controller.inputDevice, teleportActivation, out bool isActivated, activation);
+            return isActivated;
+        }
+    }
+
 
 # Modification Environnement
 Actuelement il est possible de modifier son environnement virtuel avec les trois que proposes Oculus. Mais en bidouillant un peu on peu créer et importer son propre environnement virtuel.
