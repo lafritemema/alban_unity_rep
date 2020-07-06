@@ -78,7 +78,7 @@ Pour l'exporter, il suffit d'aller dans file/Build Settings et ensuite on clic s
 
 ![error](Images/error.png)
 
-Aie des erreurs sont apparues! Pour régler cela et exporter notre projet au format APK, il faut dans edit/Project Settings ensuite dans l'onglet Player sélectionner Android et dans Other Settings cliquer sur Vulkan puis - pour le supprimer. Maintenant on retourne sur l'onglet et le build marche correctement.
+Aie des erreurs sont apparues ! Pour régler cela et exporter notre projet au format APK, il faut aller dans edit/Project Settings, ensuite dans l'onglet Player sélectionner Android et pour finir supprimer Vulkan avec - depuis Other Settings. Maintenant on retourne sur l'onglet et le build marche correctement.
 
 ![vulcan](Images/vulcan.png)
 
@@ -115,9 +115,9 @@ Pour installer notre test nous utiliserons uniquement ces deux icones (celle de 
 
 ![barre](Images/barre.png)
 
-On clique sur l'icone de gauche et on sélectionne le fichier APK que l'on a build précédement. Un message apparait en bas une fois le téléchargement terminé. Pour regarder les tâches en cours il suffit de cliquer sur l'icone de liste avec un v. Une fois cela fais il ne nous reste plus qu'à aller dans la bibliothèque de notre casque ensuite source inconnues et enfin de lancer notre test. 
+On clique sur l'icone de gauche et on sélectionne le fichier APK que l'on a build précédement. Un message apparait en bas une fois le téléchargement terminé. Pour regarder les tâches en cours il suffit de cliquer sur l'icone de liste avec un v. 
 
-Mais faire cela à chaque fois que l'on souhaite tester notre projet cela deviens long, c'est pourquoi il existe une façon de tester sans perdre tout ce temps. La solution l'Oculus Link.
+Une fois le téléchargement finis, il ne nous reste plus qu'à aller dans la bibliothèque de notre casque et dans source inconnues pour lancer notre test. Mais faire cela à chaque fois que l'on souhaite tester notre projet cela deviens long, c'est pourquoi il existe une façon de tester sans perdre tout ce temps. La solution l'Oculus Link.
 
 # Oculus Link
 Oculus Link permet de brancher votre Oculus Quest sur votre PC via un câble USB afin que ce dernier soit reconnu comme un Oculus Rift Standard. Le but étant de pouvoir accéder à son ordinateur via le casque, mais aussi d’avoir accès à des jeux et applications plus gourmandes en exploitant la puissance de votre ordinateur. Malheureusement l'application Oculus n'est pas encore disponible pour Linux (peut être en utilisant Wine il y aurait moyen d'avoir l'appli sur Linux, à tester). 
@@ -127,7 +127,7 @@ Oculus Link nécessite un câble USB de haute qualité. Il est recommandé d’u
 
 Pour se connecter rien de plus simple, une fois votre casque reconnu par l’application PC, l’Oculus détecte automatiquement votre ordinateur et vous propose de passer sur la fonctionnalité Oculus Link Beta. En acceptant, vous vous retrouvez dans l’environnement VR propre à l’Oculus Rift avec un accès complet à son catalogue de jeux.
 
-Important si vous voulez tester vos jeux sur Unity avec Oculus link en plus de [ça](https://github.com/lafritemema/alban_unity_rep#setup) pour la partie 2 faire pour Windows aussi).
+Important si vous voulez tester vos jeux sur Unity avec Oculus link en plus de [ça](https://github.com/lafritemema/alban_unity_rep#setup) faire la partie 2 pour Windows aussi.
 
 # Projet Setup
 Ce petit projet a pour but de tester plusieurs choses, voir ce qu'il est possible de faire, prototyper.
@@ -135,20 +135,20 @@ Ce petit projet a pour but de tester plusieurs choses, voir ce qu'il est possibl
 ### Configuration de la caméra
 
 #### Préfabs
-En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRPlayerController" C'est un préfabs ou nous avons besoin de configurer uniquement le tracking origin mode (pour régler la caméra en fonction de la distance du casque et du sol).
+En important Oculus Integration depuis l'Asset Store, nous avons accès à "OVRPlayerController" C'est un préfabs ou nous avons besoin de configurer uniquement le tracking origin mode sur floor (pour régler la caméra en fonction de la distance du casque et du sol).
 
 #### Manuel
-1. Créer un "Empty" dans Hierarchy, et renommer le VR Rig.
+1. Avec clic droit dans Hierarchy Créer un "Empty", et renommer le VR Rig.
 2. Faites "Add Component" et taper XR Rig.
 3. Créer une caméra "Camera Offset" à la racine de VR Rig, et une autre caméra "VR camera" à la racine de l'autre caméra et avec "Add Component" ajouter Tracked Pose Driver.
-4. faites un glisser déposer des caméras dans le component XR Rig de l'Empty.f
+4. Faire un glissé déposé des caméras dans le component XR Rig de l'Empty.
 
 ![empty](Images/empty.png) ![xr](Images/xr.png)
 
 ### Configuration des mains
 
 #### Préfabs
-Avec Oculus Integration nous avons CustomHandLeft et CustomHandRight et on a juste a faire un glissé déposé dans le model prefab de Left Hand et Right Hand.
+Avec Oculus Integration nous avons "CustomHandLeft" et "CustomHandRight", et on a juste a faire un glissé déposé dans le model prefab de "Left Hand" et "Right Hand".
 
 ![model](Images/model.png)
 
@@ -161,32 +161,44 @@ Avec Oculus Integration nous avons CustomHandLeft et CustomHandRight et on a jus
 3. Vous pouvez soit importer des mains soit en créer vous même avec des formes pour ensuite faire un glissé déposé dans le model prefab de Left Hand et Right Hand.
 
 ### Grab
-Ajouter XR direct interactor et Sphere collider via "Add Component" sur left hand et right hand. Ensuite pour Sphere collider mettre le Radius à 0.2, et cocher Is Trigger.
+
+#### Préfabs
+Avec l'oculus integration le grab est déjà inclus pour interagir avec des objets il y a juste a leurs rajouter "OVR Grabbable Script" via "Add Component" depuis l'onglet Inspector.
+
+#### Manuel
+Ajouter "XR Direct interactor" et "Sphere collider" via "Add Component" sur Left hand et Right hand. Ensuite pour Sphere collider mettre le Radius à 0.2, et cocher" Is Trigger".
 
 ![sphere](Images/sphere.png)
 
 Si vous voulez attrapper un objet il suffit de lui ajouter XR Grabbable via "Add Component".
 
 ### Interaction
-Nous allons intéragir avec une porte de commode. Pour ce faire installer le prefab [ici](https://drive.google.com/file/d/18AU3DCQzmYgYekg_0-VYmnOQOcV7mftR/view). Une fois téléchargé et importé sur Unity sélectionner Door dans Cabinet et avec "Add Component" ajouter XR Grabbable, puis faire un glissé déposé du door handler dans collider et mettre le "movement type" sur Velocity tracking.
+
+#### Préfabs
+Nous allons intéragir avec une porte de commode. Pour ce faire installer le prefab [ici](https://drive.google.com/file/d/18AU3DCQzmYgYekg_0-VYmnOQOcV7mftR/view). Une fois téléchargé et importé sur Unity sélectionner "Door" dans Cabinet et avec "Add Component" ajouter XR Grabbable (ou "OVR Grabbable Script" en fonction de si vous avez fait une configuration "Prefabs" ou "Manuel") , puis faire un glissé déposé du "door handler" dans collider et mettre le "movement type" sur Velocity tracking.
 
 ![door](Images/door.png) ![collider](Images/collider.png)
 
-Toujours dans Door on ajoute Hinge Joint via "Add Component" (le but étant de faire tourner la porte autour d'un point fixe). En cliquant sur Edit angular limits on peut apercevoir et modifier le point fixe sur lequel tournera a porte, cocher ensuite "use limits" pour limiter la rotation de la porte (voir photo ci desosus).
+Toujours dans Door on ajoute Hinge Joint via "Add Component" (le but étant de faire tourner la porte autour d'un point fixe). En cliquant sur Edit angular limits on peut apercevoir et modifier le point fixe sur lequel tournera la porte. Mettre les même paramètres "Anchor" et "Axis" que moi, enfin cocher "use limits" pour limiter la rotation de la porte (voir photo ci dessous).
 
 ![joint](Images/joint.png) ![cabinet](Images/cabinet.png)
 
-La porte marche parfaitement. Dans ce cas on avait un handler pour la porte, si jamais on veut faire une porte ou quelque chose qui coulisse mais sans avoir de poigné, on peut en faire un. 
+Dans ce cas on avait un handler pour la porte, si jamais on veut faire une porte ou quelque chose qui coulisse mais sans avoir de poigné, ou d'objet pour intéragir avec, on peut en faire un. 
 
-Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute fixed joint et XR grabbable et pour le connected body on fait un glissé déposer de la porte. Comme cela on a une forme que l'on peut attraper mais qui est fixé à notre porte et on peut intéragir avec elle maintenant. On peut le rendre invisible pour avoir l'impression d'attraper la poigné en décochant Mesh Renderer.
+#### Manuel
+Tout d'abord, on créer un cube avec la forme d'une poigné (par exemple), et avec "Add Component" on ajoute "Fixed Joint" et "XR Grabbable". Dans la partie "connected body" on fait un glissé déposer de la porte (ou de l'objet avec lequel on veut fixer notre forme). Comme cela on a une forme que l'on peut attraper et qui est fixé à notre porte. On peut maintenant intéragir avec elle. (Optionnel : on peut le rendre invisible pour avoir l'impression d'attraper la poigné en décochant Mesh Renderer).
 
-![handler](Images/handler.png) ![mesh](Images/mesh.png)
+![handler](Images/handler.png) ![mesh](Images/mesh.png) ![handler2](Images/handler2.png)
 
 ### Déplacement
-Si on utilise l'OVRPlayerController le déplacement est déjà actif sur le préfab, sinon si on le fait à la main il faut coder en C#.  
-Pour commencer on créer uns script que avec "Add movement" ensuite on y insert ce texte :
 
-![move1](Images/move1.png) ![move2](Images/move2.png)
+#### Préfabs
+Avec l'OVRPlayerController le déplacement est déjà actif, donc nous n'avons rien besoin de faire.
+
+#### Manuel
+Il faut coder en C#. Pour commencer on créer un script avec "Add component" ensuite on y insert ce texte :
+
+![move1](Images/move1.png) ![move2](Images/move2.png) ![move3](Images/move3.png)
 
 ### Téléportation
 1. Pour commencer on ajoute Locomotion System et Teleportation Provider via "Add Component sur VR Rig.
