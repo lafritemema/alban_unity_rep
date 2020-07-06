@@ -361,7 +361,7 @@ Attention il y a quelques changements de position avec les versions récentes de
 ### Hands Draw
 Pour la suite vous devez importer le package "VR Draw" situé dans le dossier "Package" (faire un glissé déposé du package dans Asset).
 
-On cherche OVRHandPrefab et on fait un glissé déposé dans LeftHandAnchor et RightHandAnchor et on modifie leur nom et les paramètres en fonction de la main (OVR Hand, Skeleton et Mesh). Ensuite on crée deux Empty que l'on place dans dans tracking spaceet que l'on renome VRDrawRight et left. Après on sélectionne les deux et on ajoute le script "VR Hand Draw" et là aussi on change les paramètres en fonction de la main (attention dans le tuto vidéo il utilise VR Draw mais cela ne marche pas il faut utiliser le VR Hand Draw). On doit obtenir ceci :
+On cherche OVRHandPrefab et on fait un glissé déposé dans LeftHandAnchor et RightHandAnchor, on modifie leur nom et les paramètres en fonction de la main (OVR Hand, Skeleton et Mesh). Ensuite on crée deux Empty que l'on place dans dans tracking space et que l'on renome VRDrawRight et left. Après on sélectionne les deux et on ajoute le script "VR Hand Draw" et là aussi on change les paramètres en fonction de la main (attention dans le tuto vidéo il utilise VR Draw mais cela ne marche pas il faut utiliser le VR Hand Draw). On doit obtenir ceci :
  
 ![draw](Images/draw.png) ![VRdraw](Images/VRdraw.png)
 
