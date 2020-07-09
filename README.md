@@ -130,7 +130,10 @@ Pour se connecter rien de plus simple, une fois votre casque reconnu par l’app
 Important si vous voulez tester vos jeux sur Unity avec Oculus link en plus de [ça](https://github.com/lafritemema/alban_unity_rep#setup) faire la partie 2 pour Windows aussi.
 
 # Projet Setup
-Ce petit projet a pour but de tester plusieurs choses, voir ce qu'il est possible de faire, prototyper.
+Ce petit projet a pour but de tester plusieurs choses, voir ce qu'il est possible de faire, prototyper.  
+Avant de commencer il faut installer le plugin "XR Interaction Toolkit", pour cela il faut dans l'onglet Window/Packages Manager, et ensuite dans Advanced on coche "show preview packages" et on Installe le plugin.
+
+![Toolkit](Images/Toolkit.png)
 
 ### Configuration de la caméra
 
